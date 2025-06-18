@@ -7,7 +7,7 @@ All projects I have uploaded are based on the **ARM Cortex-M4** series of microc
 - **MCU**: STM32F401xx (Cortex-M4, up to 84 MHz)
 - **IDE**: STM32CubeIDE, Arduino IDE (for Arduino interfacing)
 - **Libraries**: STM32F4xx
-- **Simulation**: Proteus, STM32CubeMX code generation
+- **Simulation**: Proteus, STM32CubeIDE code generation
 
 # 📁 Project Highlights
 
