@@ -1,0 +1,1 @@
+This is a simple project simulation based on LED and PUSH BUTTON. If a push button pressed once a LED turns off, otherwise glows continuously.
