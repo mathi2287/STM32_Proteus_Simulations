@@ -1,24 +1,17 @@
 *Microcontroller Used:* STM32F401RE with STM32CubeIDE a Bare metal program
 
 *GPIO Configuration:* 
-Port A (PA0–PA3) configured as output to control 4 LEDs.
+1. Port A (PA0–PA3) configured as output to control 4 LEDs.
+2. Port B (PB0–PB3) configured as input in Open-Drain mode with Pull-Down resistors for 4 push buttons.
 
-Port B (PB0–PB3) configured as input in Open-Drain mode with Pull-Down resistors for 4 push buttons.
+*Default Button State:*
+1. Pull-down keeps PBx pins at logic LOW (0) when button is not pressed.
+2. Pressing the button connects the pin to HIGH (1).
 
-Default Button State:
-
-Pull-down keeps PBx pins at logic LOW (0) when button is not pressed.
-
-Pressing the button connects the pin to HIGH (1).
-
-Working Logic:
-
-Each button press toggles its respective LED:
-
-PB0 → PA0
-
-PB1 → PA1
-
-PB2 → PA2
-
-PB3 → PA3
+*Working Logic:*
+1. Each button press toggles its respective LED:
+    PB0 → PA0
+    PB1 → PA1
+    PB2 → PA2
+    PB3 → PA3
+2. Learning Outcome: Practiced GPIO input/output, pull-downs, open-drain config, LED control, and button logic.
