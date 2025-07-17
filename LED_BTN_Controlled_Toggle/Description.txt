@@ -14,4 +14,4 @@
     PB1 → PA1
     PB2 → PA2
     PB3 → PA3
-2. Learning Outcome: Practiced GPIO input/output, pull-downs, open-drain config, LED control, and button logic.
+2. Learning Outcome: Practiced GPIO input/output, pull-downs, open-drain config, LED control and button logic.
