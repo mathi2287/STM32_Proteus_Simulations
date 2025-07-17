@@ -1,1 +1,13 @@
+Tools Requirements:
+  - Proteus 8 (Hardware Simulation)
+  - STM32CubeIDE (Convert Embedded C to .Hex)
 
+Hardware Used:
+  - STM32F4 Nucleo board (F401RE or F411RE)
+  - 4 LEDs (connected to GPIO output pins) with Current limiting resistor
+  - 1 Push Button (connected to GPIO input pin with pull-down)
+
+Working Principle:
+  - Every time the button is pressed, the counter increases by 1.
+  - The 4 output pins (connected to LEDs) show the binary representation of the current counter value.
+  - After reaching 15 (0b1111), it wraps back to 0 (0b0000).
