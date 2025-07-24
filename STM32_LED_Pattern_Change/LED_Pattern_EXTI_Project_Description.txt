@@ -1,0 +1,32 @@
+Project Title: STM32F401RE - LED Pattern Toggle using External Interrupt (EXTI)
+
+Description:
+This project demonstrates how to control and toggle between multiple LED animation patterns using an external push button interrupt on the STM32F401RE microcontroller. The system continuously runs one LED pattern at a time and switches to the next pattern whenever the push button (connected to pin PB0) is pressed and released.
+
+Key Features:
+- Bare-metal programming (no HAL/LL libraries used)
+- External interrupt configuration using EXTI0 (PB0)
+- Debounce handling using software delay inside ISR
+- Two unique LED patterns running on GPIOA pins 0 to 15
+- LED pattern changes only once per button press (rising edge)
+
+Modules Used:
+1. ledControl.c / .h – Handles LED initialization and animation patterns.
+2. exti.c / .h – Sets up external interrupt on PB0.
+3. main.c – Coordinates pattern switching and contains the interrupt handler.
+
+Working:
+- On power-up, LED pattern 1 begins automatically.
+- When the user presses and releases the push button (rising edge), the EXTI0 interrupt is triggered.
+- Inside the interrupt handler, a software debounce delay ensures clean signal, and the pattern variable is toggled.
+- The main loop keeps checking the current pattern and executes the corresponding LED animation in a blocking loop.
+
+Hardware Requirements:
+- STM32F401RE Nucleo or custom board
+- 16 LEDs connected to GPIOA pins 0-15 via current-limiting resistors
+- Push button connected to PB0 with a pull-down resistor (or internal pull-down)
+
+Future Improvements:
+- Use hardware timer for precise debounce handling
+- Add more patterns and a circular switch mechanism
+- Non-blocking LED pattern display using SysTick or TIM interrupts
