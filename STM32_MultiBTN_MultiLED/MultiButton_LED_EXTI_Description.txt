@@ -1,0 +1,24 @@
+Project: Multi-Button Interrupt Controlled LED System using STM32F401RE
+
+Description:
+This embedded systems project demonstrates the use of External Interrupts (EXTI) on the STM32F401RE microcontroller to control multiple LEDs using push buttons. Each push button is configured on a GPIO pin (PB0, PB1, PB9, PB10) and is mapped to a specific EXTI line (EXTI0, EXTI1, EXTI9, EXTI10). When a button is pressed, it triggers an interrupt service routine (ISR) that lights up or toggles a corresponding LED (PA0, PA1, PA2, PA3).
+
+The project includes:
+- Initializing GPIO pins for 4 LEDs as output.
+- Initializing GPIO pins for 4 push buttons as input with internal pull-down resistors.
+- Configuring SYSCFG EXTICR to map GPIOB pins to EXTI lines.
+- Enabling EXTI lines with falling edge trigger detection.
+- Writing ISRs for each EXTI to blink or toggle an LED.
+
+This project is useful to understand:
+- GPIO input/output control
+- External interrupts and their configuration
+- NVIC interrupt handling
+- Basic embedded C programming for STM32
+
+Tools Used:
+- STM32F401RE Nucleo Board
+- STM32CubeIDE
+- Proteus 8 (for circuit simulation)
+- 4 Push Buttons (connected to PB0, PB1, PB9, PB10)
+- 4 LEDs (connected to PA0, PA1, PA2, PA3)
