@@ -7,7 +7,7 @@ The project includes:
 - Initializing GPIO pins for 4 LEDs as output.
 - Initializing GPIO pins for 4 push buttons as input with internal pull-down resistors.
 - Configuring SYSCFG EXTICR to map GPIOB pins to EXTI lines.
-- Enabling EXTI lines with falling edge trigger detection.
+- Enabling EXTI lines with rising edge trigger detection.
 - Writing ISRs for each EXTI to blink or toggle an LED.
 
 This project is useful to understand:
